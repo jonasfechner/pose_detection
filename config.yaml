@@ -1,10 +1,10 @@
 exercise_configs:
   push_up:
     waterline: .4
-    min_valley_length: 10
-    max_valley_length: 50
+    min_valley_length: 15
+    max_valley_length: 45
     min_volume: 7
-    max_volume: 187
+    max_volume: 27
 
   squat:
     waterline: 0.9
