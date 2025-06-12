@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 exercise = "push_up"
 video_path = "videos/Push-ups_1.mp4"
-onnx_model_path = f"weights/{exercise}_model.onnx"
+onnx_model_path = f"weights/onnx/{exercise}_model.onnx"
 output_plot_path = f"plots/rep_detection_{exercise}.png"
 
 dim = 26  # 13 keypoints × 2 (x, y)
