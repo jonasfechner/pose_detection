@@ -6,10 +6,11 @@ import mediapipe as mp
 import matplotlib.pyplot as plt
 
 # -------------------- Configuration --------------------
-video_path = "Push-ups_1.mp4"
-onnx_model_path = "push_up_model.onnx"
+
 exercise = "push_up"
-output_plot_path = "rep_detection_signal.png"
+video_path = "videos/Push-ups_1.mp4"
+onnx_model_path = f"weights/{exercise}_model.onnx"
+output_plot_path = f"plots/rep_detection_{exercise}.png"
 
 dim = 26  # 13 keypoints × 2 (x, y)
 BIG_KEYPOINTS = [0, 11, 12, 13, 14, 15, 16, 23, 24, 25, 26, 27, 28]
@@ -101,7 +102,8 @@ while True:
 
             if (
                 valley_length >= min_valley_length and
-                valley_length < max_valley_length
+                valley_length < max_valley_length and
+                min_volume <= valley_volume <= max_volume
             ):
                 filtered_valleys.append({
                     "start": valley_start,

@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 from model import PoseBinaryPT
 
 # -------------------- Configuration --------------------
-video_path = "Push-ups_1.mp4"
-model_path = "push_up_binary_best.pth"
+video_path = "videos/Push-ups_1.mp4"
+model_path = "weights/push_up_binary_best.pth"
 exercise = "push_up"
 output_plot_path = "rep_detection_signal.png"
 
